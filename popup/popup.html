@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost in Lecture</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="/images/icon128.png" alt="Lost in Lecture Logo" class="logo">
+        <h1 class="title">Lost in Lecture</h1>
+        <div class="button-container">
+            <button id="startRecording" class="button">Start Recording</button>
+            <button id="stopRecording" class="button" disabled>Stop Recording</button>
+            <button id="generateQuiz" class="button">Generate Quiz</button>
+            <button id="summarizeLecture" class="button">Summarize Lecture</button>
+        </div>
+        <div id="status" class="status"></div>
+        <div id="quiz" class="quiz-container" style="display: none;">
+            <h2 class="quiz-title">Quiz Time!</h2>
+            <p id="question" class="quiz-question"></p>
+            <div id="options" class="quiz-options"></div>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
