@@ -28,11 +28,11 @@ const NotebookBackground = () => {
 
       // Draw blue horizontal lines with increased spacing
       for (let y = 60; y < height; y += 60) {
-        roughCanvas.line(0, y, width, y, { stroke: 'blue' });
+        roughCanvas.line(0, y, width, y, { stroke: 'black' });
       }
 
       // Draw red vertical line on the left
-      roughCanvas.line(50, 0, 50, height, { stroke: 'red' });
+      roughCanvas.line(50, 0, 50, height, { stroke: 'gray' });
     };
 
     drawNotebookLines();

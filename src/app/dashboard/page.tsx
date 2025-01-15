@@ -1,15 +1,10 @@
 "use client";
-
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { auth, db } from '@/firebase/firebaseInit';
 import { onAuthStateChanged } from 'firebase/auth';
 import { doc, getDoc } from 'firebase/firestore';
 
-const notes = [
-  { title: "Note 1", description: "This is a brief description of the first saved note." },
-  { title: "Note 2", description: "This is a brief description of the second saved note." },
-];
 
 const Dashboard = () => {
   const router = useRouter();
@@ -49,15 +44,6 @@ const Dashboard = () => {
     <div className="p-4">
       <div className="flex justify-right">
         <h2 className="text-xl font-bold">Welcome, {userName || 'User'}!</h2>
-      </div>
-      {error && <p className="text-red-500">{error}</p>}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-        {notes.map((note, index) => (
-          <div key={index} className="p-4 border rounded shadow cursor-pointer" onClick={() => handleCardClick(note.title)}>
-            <h3 className="font-semibold">{note.title}</h3>
-            <p>{note.description}</p>
-          </div>
-        ))}
       </div>
       <button className="fixed bottom-4 right-4 p-3 bg-blue-500 text-white rounded-full shadow-lg hover:bg-blue-600">
         <i className="fas fa-microphone"></i>
