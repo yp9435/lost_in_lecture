@@ -1,5 +1,5 @@
 # Lost in Lecture - Chrome Extension
-
+![Lost in Lecture](images/LIL.jpg)
 A Chrome extension that helps students maintain focus during lectures by providing real-time transcription, summarization, and quiz generation.
 
 ## Features
